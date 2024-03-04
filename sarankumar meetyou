@@ -1,0 +1,16 @@
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class CreateFile {
+    public static void main(String[] args) {
+        try {
+            FileWriter myWriter = new FileWriter("filename.txt");
+            myWriter.write("Your content");
+            myWriter.close();
+            System.out.println("Successfully created the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+}
